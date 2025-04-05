@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Furniture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('https://your-direct-image-link.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8); /* Light overlay for readability */
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section {
+            display: none;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section.active {
+            display: block;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+        .hero-text {
+            max-width: 40%;
+        }
+        .hero-text h1 {
+            font-size: 50px;
+        }
+        .hero-text p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: gray;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <nav class="navbar">
+        <div class="logo">AURDE</div>
+        <ul>
+            <li><a onclick="showSection('home')">Home</a></li>
+            <li><a onclick="showSection('furniture')">Furniture</a></li>
+            <li><a onclick="showSection('interiors')">Interiors</a></li>
+            <li><a onclick="showSection('blog')">Blog</a></li>
+            <li><a onclick="showSection('support')">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="home" class="section active">
+        <div class="hero">
+            <div class="hero-text">
+                <p>November 2023</p>
+                <h1>STUDIO FURNITURE</h1>
+                <p>Explore our latest collection of modern and stylish furniture for your home and office.</p>
+                <a class="btn" onclick="showSection('furniture')">Explore Collection</a>
+            </div>
+            <div class="hero-image">
+                <img src="furniture.jpg" alt="Furniture Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Furniture Section -->
+    <div id="furniture" class="section">
+        <h1>Furniture Collection</h1>
+        <p>Welcome to our furniture collection page! Discover high-quality furniture for your home.</p>
+        <a class="btn" onclick="showSection('home')">Back to Home</a>
+    </div>
+
+    <!-- Interiors Section -->
+    <div id="interiors" class="section">
+        <h1>Interior Designs</h1>
+        <p>Discover beautiful interior designs for your home and office.</p>
+        <a class="btn" onclick="showSection('home')">Back to Home</a>
+    </div>
+
+    <!-- Blog Section -->
+    <div id="blog" class="section">
+        <h1>Blog</h1>
+        <p>Read our latest articles on furniture and interior design trends.</p>
+        <a class="btn" onclick="showSection('home')">Back to Home</a>
+    </div>
+
+    <!-- Support Section -->
+    <div id="support" class="section">
+        <h1>Support</h1>
+        <p>Contact us for any inquiries or support. We are here to help!</p>
+        <a class="btn" onclick="showSection('home')">Back to Home</a>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        let sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

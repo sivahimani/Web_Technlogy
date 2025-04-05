@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Event Registration Form</h2>
+
+    <form>
+      <div class="section">
+        <h3>Event Details</h3>
+        
+        <label>Event Name:
+          <input type="text" name="event_name" required>
+        </label>
+        
+        <label>Event Date:
+          <input type="date" name="event_date" required>
+        </label>
+        
+        <label>Event Time:
+          <input type="time" name="event_time" required>
+        </label>
+        
+        <label>Event Location:
+          <input type="text" name="event_location" required>
+        </label>
+        
+        <label>Type of Event:</label>
+        <label><input type="checkbox" name="event_type" value="Technical"> Technical</label>
+        <label><input type="checkbox" name="event_type" value="Non-Technical"> Non-Technical</label>
+
+        <label>If other, please describe:
+          <input type="text" name="other_description">
+        </label>
+      </div>
+
+      <div class="section">
+        <h3>Event Organizer</h3>
+        
+        <label>Name:
+          <input type="text" name="organizer_name" required>
+        </label>
+        
+        <label>Department:
+          <input type="text" name="organizer_department">
+        </label>
+        
+        <label>Email:
+          <input type="email" name="organizer_email" required>
+        </label>
+        
+        <label>Phone:
+          <input type="tel" name="organizer_phone">
+        </label>
+      </div>
+
+      
+      <div class="section">
+        <h3>Technical</h3>
+
+        <label><input type="checkbox" name="" value="Hackathon"> Hackathon</label>
+        <label><input type="checkbox" name="needs" value="Coding Bootcamp"> Coding Bootcamp</label>
+        <label><input type="checkbox" name="needs" value="Tech Talk"> Tech Talk</label>
+        <label><input type="checkbox" name="needs" value="Web Development Workshop"> Web Development Workshop</label>
+        <label><input type="checkbox" name="needs" value="AI & Machine Learning Conference"> AI & Machine Learning Conference</label>
+        <label><input type="checkbox" name="needs" value="Cybersecurity Seminar"> Cybersecurity Seminar</label>
+        <label><input type="checkbox" name="needs" value="Data Science Expo"> Data Science Expo</label>
+        <label><input type="checkbox" name="needs" value="Robotics Challenge"> Robotics Challenge</label>
+        <label><input type="checkbox" name="needs" value="IoT Showcase"> IoT Showcase</label>
+        <label><input type="checkbox" name="needs" value="Tech Innovation Summit"> Tech Innovation Summit</label>
+        <label><input type="checkbox" name="needs" value="App Development Contest"> App Development Contest</label>
+        <label><input type="checkbox" name="needs" value="Software Engineering Bootcamp"> Software Engineering Bootcamp</label>
+        <label><input type="checkbox" name="needs" value="Cloud Computing Symposium"> Cloud Computing Symposium</label>
+        <label><input type="checkbox" name="needs" value="Virtual Reality Workshop"> Virtual Reality Workshop</label>
+        <label><input type="checkbox" name="needs" value="Game Development Workshop"> Game Development Workshop</label>
+        <label><input type="checkbox" name="needs" value="Tech Career Fair"> Tech Career Fair</label>
+        <label><input type="checkbox" name="needs" value="Startup Pitch Event"> Startup Pitch Event</label>
+        <label><input type="checkbox" name="needs" value="Blockchain Summit"> Blockchain Summit</label>
+        <label><input type="checkbox" name="needs" value="Cloud Technologies Bootcamp"> Cloud Technologies Bootcamp</label>
+        <label><input type="checkbox" name="needs" value="Augmented Reality Hackathon"> Augmented Reality Hackathon</label>
+        <label><input type="checkbox" name="needs" value="Other"> Other</label>
+        
+        
+        <label>If other, please describe:
+          <input type="text" name="tech_other_description">
+        </label>
+      </div>
+
+      <div class="section">
+        <h3>External Contacts</h3>
+        
+        <label>Are you inviting anyone?
+          <select name="open_public">
+            <option value="">-- Select --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+        
+        <label>Are you ok with sharing their names?
+          <select name="outside_guests">
+            <option value="">-- Select --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+        
+        <label>If yes, please provide names:
+          <textarea name="guest_names" rows="3"></textarea>
+        </label>
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+</body>
+</html>

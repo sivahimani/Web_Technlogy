@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .choice {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .choice:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+    <p id="result"></p>
+    <div id="choices">
+        <div class="choice" data-choice="rock">Rock</div>
+        <div class="choice" data-choice="paper">Paper</div>
+        <div class="choice" data-choice="scissors">Scissors</div>
+    </div>
+
+    <script>
+        const choices = document.querySelectorAll('.choice');
+        const resultDisplay = document.getElementById('result');
+
+        choices.forEach(choice => {
+            choice.addEventListener('click', () => {
+                playRound(choice.dataset.choice);
+            });
+        });
+
+        function playRound(playerChoice) {
+            const computerChoice = getComputerChoice();
+            let result = '';
+
+            if (playerChoice === computerChoice) {
+                result = "It's a tie!";
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = `You win! ${playerChoice} beats ${computerChoice}`;
+            } else {
+                result = `You lose! ${computerChoice} beats ${playerChoice}`;
+            }
+
+            resultDisplay.textContent = result;
+        }
+
+        function getComputerChoice() {
+            const choices = ['rock', 'paper', 'scissors'];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+    </script>
+</body>
+</html>
